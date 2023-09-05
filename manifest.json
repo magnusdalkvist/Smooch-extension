@@ -9,5 +9,22 @@
   "background": {
     "service_worker": "service-worker.js"
   },
-  "permissions": ["storage"]
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "block_videos",
+        "enabled": false,
+        "path": "block_videos.json"
+      }
+    ]
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "webRequest",
+    "webNavigation",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback"
+  ],
+  "host_permissions": ["https://www.netflix.com/*"]
 }
